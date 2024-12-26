@@ -1,3 +1,6 @@
+using WMPLib;
+
+
 namespace MemoryMatchV1
 {
     public partial class Form1 : Form
@@ -15,10 +18,15 @@ namespace MemoryMatchV1
         private Button? hidingCard = null;
         private int animationProgress = 0;
 
+        private WMPLib.WindowsMediaPlayer player;
+
+
         public Form1()
         {
             InitializeComponent();
             InitializeGame();
+            player = new WMPLib.WindowsMediaPlayer();
+
         }
 
         private void InitializeGame()
@@ -76,6 +84,8 @@ namespace MemoryMatchV1
 
             if (firstCard == null)
             {
+                PlaySound("Sounds/flip.mp3");
+
                 firstCard = clickedCard;
                 ShowCard(firstCard);
                 return;
@@ -83,6 +93,8 @@ namespace MemoryMatchV1
 
             if (secondCard == null && clickedCard != firstCard)
             {
+                
+
                 secondCard = clickedCard;
                 ShowCard(secondCard);
 
@@ -91,6 +103,8 @@ namespace MemoryMatchV1
 
                 if (firstCard.Tag.ToString() == secondCard.Tag.ToString())
                 {
+                    PlaySound("Sounds/match.mp3");
+
                     firstCard.Enabled = false;
                     secondCard.Enabled = false;
                     firstCard = null;
@@ -98,6 +112,7 @@ namespace MemoryMatchV1
 
                     if (tableLayoutPanel1.Controls.Cast<Button>().All(b => !b.Enabled))
                     {
+                        PlaySound("Sounds/win.mp3");
                         MessageBox.Show($"You found all pairs in {moves} moves! Congratulations!");
                     }
                 }
@@ -112,6 +127,9 @@ namespace MemoryMatchV1
         private void FlipTimer_Tick(object sender, EventArgs e)
         {
             flipTimer.Stop();
+
+            PlaySound("Sounds/flip.mp3");
+
             HideCard(firstCard, secondCard);
         }
 
@@ -120,6 +138,9 @@ namespace MemoryMatchV1
             animatingCard = card;
             animationProgress = 0;
             flipAnimationTimer.Start();
+
+            // Play flip sound
+            PlaySound("Sounds/flip.mp3");
         }
 
         private void HideCard(Button card1, Button card2)
@@ -148,6 +169,8 @@ namespace MemoryMatchV1
                 button.BackgroundImage = null;
                 i++;
             }
+
+            PlaySound("Sounds/start.mp3");
         }
 
         private void FlipAnimationTimer_Tick(object sender, EventArgs e)
@@ -210,7 +233,32 @@ namespace MemoryMatchV1
             }
         }
 
+        private void PlaySound(string filePath)
+        {
+            try
+            {
+                string basePath = AppDomain.CurrentDomain.BaseDirectory; // Base path (bin/Debug)
+                string fullPath = Path.Combine(basePath, filePath); // Combine base path with relative path
+                
 
+                player.settings.volume = 100; // Ensure volume is set
+                player.URL = fullPath; // Use the full path
+                player.controls.play(); // Play the sound
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error playing sound: {ex.Message}");
+            }
+        }
+
+
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PlaySound(@"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Sounds\win.mp3");
+        }
     }
 }
 
