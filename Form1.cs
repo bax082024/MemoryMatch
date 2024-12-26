@@ -17,17 +17,28 @@ namespace MemoryMatchV1
         {
             cardValues = new List<string>
             {
-                "Image/Cards/1.png", "Image/Cards/1.png",
-                "Image/Cards/2.png", "Image/Cards/2.png",
-                "Image/Cards/3.png", "Image/Cards/3.png",
-                "Image/Cards/4.png", "Image/Cards/4.png",
-                "Image/Cards/5.png", "Image/Cards/5.png",
-                "Image/Cards/6.png", "Image/Cards/6.png",
-                "Image/Cards/7.png", "Image/Cards/7.png",
-                "Image/Cards/8.png", "Image/Cards/8.png",
-                "Image/Cards/9.png", "Image/Cards/9.png",
-                "Image/Cards/10.png", "Image/Cards/10.png"
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card1.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card1.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card2.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card2.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card3.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card3.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card4.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card4.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card5.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card5.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card6.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card6.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card7.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card7.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card8.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card8.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card9.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card9.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card10.png",
+                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card10.png"
             };
+
 
             cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
 
