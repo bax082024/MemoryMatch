@@ -69,6 +69,7 @@
             // 
             // lblTitle
             // 
+            lblTitle.Anchor = AnchorStyles.None;
             lblTitle.AutoSize = true;
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Ravie", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -81,10 +82,11 @@
             // 
             // btnStart
             // 
+            btnStart.Anchor = AnchorStyles.None;
             btnStart.BackColor = Color.OliveDrab;
             btnStart.FlatStyle = FlatStyle.Popup;
             btnStart.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnStart.Location = new Point(394, 615);
+            btnStart.Location = new Point(394, 620);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(120, 37);
             btnStart.TabIndex = 3;
@@ -110,6 +112,7 @@
             // 
             // lblMoves
             // 
+            lblMoves.Anchor = AnchorStyles.None;
             lblMoves.AutoSize = true;
             lblMoves.BackColor = Color.Transparent;
             lblMoves.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -193,6 +196,7 @@
             Controls.Add(tableLayoutPanel1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Memory Match";
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
