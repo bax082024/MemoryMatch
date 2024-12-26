@@ -40,7 +40,17 @@ namespace MemoryMatchV1
                 tableLayoutPanel1.Controls.Add(button); // Add button to the grid
             }
 
+            // Initialize the flip timer
+            flipTimer = new Timer
+            {
+                Interval = 1000 // 1 second
+            };
+            flipTimer.Tick += FlipTimer_Tick;
+
         }
+
+
+
 
 
 
