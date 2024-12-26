@@ -15,6 +15,16 @@ C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\refint\M
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMatchV1.pdb
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMatchV1.genruntimeconfig.cache
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\ref\MemoryMatchV1.dll
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card1.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card10.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card2.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card3.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card4.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card5.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card6.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card7.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card8.png
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\Cards\card9.png
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\MemoryMatchV1.exe
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\MemoryMatchV1.deps.json
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\MemoryMatchV1.runtimeconfig.json

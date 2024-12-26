@@ -17,26 +17,16 @@ namespace MemoryMatchV1
         {
             cardValues = new List<string>
             {
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card1.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card1.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card2.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card2.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card3.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card3.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card4.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card4.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card5.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card5.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card6.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card6.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card7.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card7.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card8.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card8.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card9.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card9.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card10.png",
-                @"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\Images\Cards\card10.png"
+                "Images/Cards/card1.png", "Images/Cards/card1.png",
+                "Images/Cards/card2.png", "Images/Cards/card2.png",
+                "Images/Cards/card3.png", "Images/Cards/card3.png",
+                "Images/Cards/card4.png", "Images/Cards/card4.png",
+                "Images/Cards/card5.png", "Images/Cards/card5.png",
+                "Images/Cards/card6.png", "Images/Cards/card6.png",
+                "Images/Cards/card7.png", "Images/Cards/card7.png",
+                "Images/Cards/card8.png", "Images/Cards/card8.png",
+                "Images/Cards/card9.png", "Images/Cards/card9.png",
+                "Images/Cards/card10.png", "Images/Cards/card10.png"
             };
 
 
