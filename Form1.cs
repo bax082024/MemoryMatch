@@ -308,15 +308,29 @@ namespace MemoryMatchV1
             );
         }
 
+        private void ElegantPurples_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.LavenderBlush, 
+                Color.DarkSlateBlue, 
+                Color.Thistle,    
+                Color.Orchid,      
+                Color.White      
+            );
+        }
+
+
+
+
 
         private void Matrix_Click(object sender, EventArgs e)
         {
             ApplyTheme(
-                Color.Black,          // Top gradient
-                Color.Black,          // Bottom gradient
-                Color.DarkGreen,      // Button default
-                Color.LimeGreen,      // Button hover
-                Color.LimeGreen       // Text color
+                Color.Black,        
+                Color.Black,         
+                Color.DarkGreen,     
+                Color.LimeGreen,   
+                Color.LimeGreen   
             );
         }
 
