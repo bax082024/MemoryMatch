@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            lblInfo = new Label();
             label1 = new Label();
             btnStart = new Button();
             SuspendLayout();
@@ -55,15 +54,6 @@
             tableLayoutPanel1.Size = new Size(785, 491);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // lblInfo
-            // 
-            lblInfo.AutoSize = true;
-            lblInfo.Location = new Point(372, 81);
-            lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(13, 15);
-            lblInfo.TabIndex = 1;
-            lblInfo.Text = "``";
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -85,6 +75,7 @@
             btnStart.TabIndex = 3;
             btnStart.Text = "Start";
             btnStart.UseVisualStyleBackColor = false;
+            btnStart.Click += btnStart_Click;
             // 
             // Form1
             // 
@@ -94,7 +85,6 @@
             ClientSize = new Size(917, 657);
             Controls.Add(btnStart);
             Controls.Add(label1);
-            Controls.Add(lblInfo);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Memory Match";
@@ -105,7 +95,6 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Label lblInfo;
         private Label label1;
         private Button btnStart;
     }
