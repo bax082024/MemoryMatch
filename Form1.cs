@@ -1,3 +1,4 @@
+using System.Drawing.Drawing2D;
 using WMPLib;
 
 
@@ -53,14 +54,23 @@ namespace MemoryMatchV1
                 var button = new Button
                 {
                     Dock = DockStyle.Fill,
-                    BackColor = Color.LightGray,
-                    Font = new Font("Arial", 14, FontStyle.Bold),
+                    BackColor = Color.LightCoral,
+                    Font = new Font("Comic Sans MS", 14, FontStyle.Bold),
                     Text = "",
-                    Tag = value
+                    Tag = value,
+                    FlatStyle = FlatStyle.Flat,
                 };
+
+                button.FlatAppearance.BorderSize = 2;
+                button.FlatAppearance.BorderColor = Color.White;
+
+                button.MouseEnter += (s, e) => button.BackColor = Color.Orange;
+                button.MouseLeave += (s, e) => button.BackColor = Color.LightCoral;
+
                 button.Click += Card_Click;
                 tableLayoutPanel1.Controls.Add(button);
             }
+
 
             flipAnimationTimer = new System.Windows.Forms.Timer
             {
@@ -93,7 +103,7 @@ namespace MemoryMatchV1
 
             if (secondCard == null && clickedCard != firstCard)
             {
-                
+
 
                 secondCard = clickedCard;
                 ShowCard(secondCard);
@@ -139,7 +149,7 @@ namespace MemoryMatchV1
             animationProgress = 0;
             flipAnimationTimer.Start();
 
-            // Play flip sound
+         
             PlaySound("Sounds/flip.mp3");
         }
 
@@ -237,13 +247,13 @@ namespace MemoryMatchV1
         {
             try
             {
-                string basePath = AppDomain.CurrentDomain.BaseDirectory; // Base path (bin/Debug)
-                string fullPath = Path.Combine(basePath, filePath); // Combine base path with relative path
-                
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                string fullPath = Path.Combine(basePath, filePath); 
 
-                player.settings.volume = 100; // Ensure volume is set
-                player.URL = fullPath; // Use the full path
-                player.controls.play(); // Play the sound
+
+                player.settings.volume = 100;
+                player.URL = fullPath; 
+                player.controls.play(); 
             }
             catch (Exception ex)
             {
@@ -251,14 +261,117 @@ namespace MemoryMatchV1
             }
         }
 
-
-
-
-
-        private void button1_Click(object sender, EventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
-            PlaySound(@"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Sounds\win.mp3");
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                this.ClientRectangle,
+                Color.DarkSlateBlue, // Top color
+                Color.MediumPurple,  // Bottom color
+                LinearGradientMode.Vertical)) 
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
+
+        private void Default_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.DarkSlateBlue, 
+                Color.MediumPurple,  
+                Color.LightCoral, 
+                Color.Orange,
+                Color.White
+            );
+        }
+
+        private void CoolBlues_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.LightSkyBlue, 
+                Color.DodgerBlue, 
+                Color.LightSteelBlue, 
+                Color.RoyalBlue,   
+                Color.White       
+            );
+        }
+
+        private void NatureGreens_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.LightGreen,   
+                Color.ForestGreen,   
+                Color.PaleGreen,  
+                Color.LimeGreen,    
+                Color.DarkGreen    
+            );
+        }
+
+        private void ElegantPurples_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.LavenderBlush, 
+                Color.DarkSlateBlue, 
+                Color.Thistle,    
+                Color.Orchid,      
+                Color.White      
+            );
+        }
+
+        private void BrightFun_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.Gold,         
+                Color.OrangeRed,   
+                Color.PeachPuff,     
+                Color.Tomato,       
+                Color.DarkRed       
+            );
+        }
+
+        private void Matrix_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.Black,        
+                Color.Black,         
+                Color.DarkGreen,     
+                Color.LimeGreen,   
+                Color.LimeGreen   
+            );
+        }
+
+        private void ApplyTheme(Color topGradient, Color bottomGradient, Color buttonDefault, Color buttonHover, Color textColor)
+        {
+            this.Paint += (s, e) =>
+            {
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    this.ClientRectangle,
+                    topGradient, 
+                    bottomGradient, 
+                    LinearGradientMode.Vertical)) 
+                {
+                    e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                }
+            };
+
+            foreach (Button button in tableLayoutPanel1.Controls.OfType<Button>())
+            {
+                button.BackColor = buttonDefault;
+                button.FlatAppearance.BorderColor = textColor;
+
+                button.MouseEnter -= (s, e) => button.BackColor = buttonHover;
+                button.MouseLeave -= (s, e) => button.BackColor = buttonDefault;
+
+                button.MouseEnter += (s, e) => button.BackColor = buttonHover;
+                button.MouseLeave += (s, e) => button.BackColor = buttonDefault;
+            }
+
+            lblTitle.ForeColor = textColor;
+            lblMoves.ForeColor = textColor;
+
+            this.Invalidate();
+        }
+
+
     }
 }
 
