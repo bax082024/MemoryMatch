@@ -80,4 +80,10 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Images\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

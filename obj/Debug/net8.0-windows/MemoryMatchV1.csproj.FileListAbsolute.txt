@@ -48,3 +48,4 @@ C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\obj\Debug\net8.0-windows\refint\Mem
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\obj\Debug\net8.0-windows\MemoryMatchV1.pdb
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\obj\Debug\net8.0-windows\MemoryMatchV1.genruntimeconfig.cache
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\obj\Debug\net8.0-windows\ref\MemoryMatchV1.dll
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Images\3.png
