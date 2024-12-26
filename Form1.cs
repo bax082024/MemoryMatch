@@ -286,6 +286,18 @@ namespace MemoryMatchV1
             );
         }
 
+        private void Matrix_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.Black,          // Top gradient
+                Color.Black,          // Bottom gradient
+                Color.DarkGreen,      // Button default
+                Color.LimeGreen,      // Button hover
+                Color.LimeGreen       // Text color
+            );
+        }
+
+
     }
 }
 
