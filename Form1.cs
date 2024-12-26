@@ -286,6 +286,18 @@ namespace MemoryMatchV1
             );
         }
 
+        private void CoolBlues_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.LightSkyBlue, // Top gradient
+                Color.DodgerBlue,   // Bottom gradient
+                Color.LightSteelBlue, // Button default
+                Color.RoyalBlue,    // Button hover
+                Color.White         // Text color
+            );
+        }
+
+
         private void Matrix_Click(object sender, EventArgs e)
         {
             ApplyTheme(
