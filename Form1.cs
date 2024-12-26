@@ -54,23 +54,21 @@ namespace MemoryMatchV1
                 var button = new Button
                 {
                     Dock = DockStyle.Fill,
-                    BackColor = Color.LightCoral, // Set a nice color
-                    Font = new Font("Comic Sans MS", 14, FontStyle.Bold), // Use a fun font
+                    BackColor = Color.LightCoral,
+                    Font = new Font("Comic Sans MS", 14, FontStyle.Bold),
                     Text = "",
                     Tag = value,
-                    FlatStyle = FlatStyle.Flat, // Use flat style for modern appearance
+                    FlatStyle = FlatStyle.Flat,
                 };
 
-                // Customize the button border
                 button.FlatAppearance.BorderSize = 2;
                 button.FlatAppearance.BorderColor = Color.White;
 
-                // Add hover effects
-                button.MouseEnter += (s, e) => button.BackColor = Color.Orange; // Hover color
-                button.MouseLeave += (s, e) => button.BackColor = Color.LightCoral; // Default color
+                button.MouseEnter += (s, e) => button.BackColor = Color.Orange;
+                button.MouseLeave += (s, e) => button.BackColor = Color.LightCoral;
 
-                button.Click += Card_Click; // Existing click event
-                tableLayoutPanel1.Controls.Add(button); // Add button to the grid
+                button.Click += Card_Click;
+                tableLayoutPanel1.Controls.Add(button);
             }
 
 
@@ -249,13 +247,13 @@ namespace MemoryMatchV1
         {
             try
             {
-                string basePath = AppDomain.CurrentDomain.BaseDirectory; // Base path (bin/Debug)
-                string fullPath = Path.Combine(basePath, filePath); // Combine base path with relative path
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                string fullPath = Path.Combine(basePath, filePath); 
 
 
-                player.settings.volume = 100; // Ensure volume is set
-                player.URL = fullPath; // Use the full path
-                player.controls.play(); // Play the sound
+                player.settings.volume = 100;
+                player.URL = fullPath; 
+                player.controls.play(); 
             }
             catch (Exception ex)
             {
