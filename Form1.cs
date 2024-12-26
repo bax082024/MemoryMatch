@@ -107,7 +107,7 @@ namespace MemoryMatchV1
 
         private void ShowCard(Button card)
         {
-            card.Text = ""; // Clear text
+            card.Text = "";
             card.BackColor = Color.White;
             card.BackgroundImage = Image.FromFile(card.Tag.ToString());
             card.BackgroundImageLayout = ImageLayout.Stretch;
@@ -117,6 +117,7 @@ namespace MemoryMatchV1
         {
             card.Text = "";
             card.BackColor = Color.LightGray;
+            card.BackgroundImage = null;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
