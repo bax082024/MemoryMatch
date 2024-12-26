@@ -84,7 +84,6 @@ namespace MemoryMatchV1
 
         private void FlipTimer_Tick(object sender, EventArgs e)
         {
-            // Hide unmatched cards
             HideCard(firstCard);
             HideCard(secondCard);
             firstCard = null;
@@ -94,14 +93,12 @@ namespace MemoryMatchV1
 
         private void ShowCard(Button card)
         {
-            // Show the card value
             card.Text = card.Tag.ToString();
             card.BackColor = Color.White;
         }
 
         private void HideCard(Button card)
         {
-            // Hide the card value
             card.Text = "";
             card.BackColor = Color.LightGray;
         }
