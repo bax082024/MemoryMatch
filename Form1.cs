@@ -2,9 +2,9 @@ namespace MemoryMatchV1
 {
     public partial class Form1 : Form
     {
-        private List<string> cardValues;
-        private Button firstCard, secondCard;
-        private Timer flipTimer;
+        private List<string> cardValues = new List<string>();
+        private Button? firstCard = null, secondCard = null;
+        private System.Windows.Forms.Timer flipTimer;
         private int moves = 0; 
 
         public Form1()
@@ -41,7 +41,7 @@ namespace MemoryMatchV1
             }
 
             // Initialize the flip timer
-            flipTimer = new Timer
+            flipTimer = new System.Windows.Forms.Timer
             {
                 Interval = 1000 // 1 second
             };
@@ -123,7 +123,30 @@ namespace MemoryMatchV1
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            private void Start_Click(object sender, EventArgs e)
+        {           
+            firstCard = null;
+            secondCard = null;
+            moves = 0;
 
+            cardValues = new List<string>
+    {
+        "A", "A", "B", "B", "C", "C", "D", "D", "E", "E",
+        "F", "F", "G", "G", "H", "H", "I", "I", "J", "J"
+    };
+            cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
+
+            int i = 0;
+            foreach (Button button in tableLayoutPanel1.Controls.OfType<Button>())
+            {
+                button.Text = "";
+                button.Tag = cardValues[i];
+                button.BackColor = Color.LightGray;
+                button.Enabled = true;
+                i++;
+            }
         }
+
     }
+}
 }
