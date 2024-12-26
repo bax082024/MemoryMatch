@@ -108,7 +108,12 @@ namespace MemoryMatchV1
             card.BackColor = Color.White;
         }
 
-
+        private void HideCard(Button card)
+        {
+            // Hide the card value
+            card.Text = "";
+            card.BackColor = Color.LightGray;
+        }
 
 
 
