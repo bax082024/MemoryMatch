@@ -10,6 +10,7 @@ namespace MemoryMatchV1
         public Form1()
         {
             InitializeComponent();
+            InitializeGame();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
