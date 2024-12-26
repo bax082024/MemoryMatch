@@ -7,6 +7,11 @@ namespace MemoryMatchV1
         private System.Windows.Forms.Timer flipTimer;
         private int moves = 0;
 
+        private System.Windows.Forms.Timer flipAnimationTimer;
+        private Button? animatingCard;
+        private bool isShrinking = true;
+        private int animationStep = 5; // The step size for shrinking/growing
+
         public Form1()
         {
             InitializeComponent();
