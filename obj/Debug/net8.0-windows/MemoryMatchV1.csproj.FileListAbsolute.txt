@@ -5,3 +5,13 @@ C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMa
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMatchV1.AssemblyInfo.cs
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMatchV1.csproj.CoreCompileInputs.cache
 C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMatchV1.sourcelink.json
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\bin\Debug\net8.0-windows\MemoryMatchV1.exe
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\bin\Debug\net8.0-windows\MemoryMatchV1.deps.json
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\bin\Debug\net8.0-windows\MemoryMatchV1.runtimeconfig.json
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\bin\Debug\net8.0-windows\MemoryMatchV1.dll
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\bin\Debug\net8.0-windows\MemoryMatchV1.pdb
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMatchV1.dll
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\refint\MemoryMatchV1.dll
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMatchV1.pdb
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\MemoryMatchV1.genruntimeconfig.cache
+C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatchV1\obj\Debug\net8.0-windows\ref\MemoryMatchV1.dll
