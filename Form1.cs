@@ -13,6 +13,16 @@ namespace MemoryMatchV1
             InitializeGame();
         }
 
+        private void InitializeGame()
+        {
+
+
+        }
+
+
+
+
+
         private void btnStart_Click(object sender, EventArgs e)
         {
 
