@@ -61,8 +61,12 @@ namespace MemoryMatchV1
             {
                 secondCard = clickedCard;
                 ShowCard(secondCard);
-                moves++;
 
+                // Increment moves counter
+                moves++;
+                lblMoves.Text = $"Moves: {moves}";
+
+                // Check for match
                 if (firstCard.Tag.ToString() == secondCard.Tag.ToString())
                 {
                     firstCard.Enabled = false;
@@ -70,6 +74,7 @@ namespace MemoryMatchV1
                     firstCard = null;
                     secondCard = null;
 
+                    // Check if all pairs are found
                     if (tableLayoutPanel1.Controls.Cast<Button>().All(b => !b.Enabled))
                     {
                         MessageBox.Show($"You found all pairs in {moves} moves! Congratulations!");
@@ -81,6 +86,7 @@ namespace MemoryMatchV1
                 }
             }
         }
+
 
         private void FlipTimer_Tick(object sender, EventArgs e)
         {
