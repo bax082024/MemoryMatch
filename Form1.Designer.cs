@@ -31,6 +31,7 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             lblInfo = new Label();
             label1 = new Label();
+            btnStart = new Button();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -73,12 +74,25 @@
             label1.TabIndex = 2;
             label1.Text = "Memory Match";
             // 
+            // btnStart
+            // 
+            btnStart.BackColor = SystemColors.ControlLight;
+            btnStart.FlatStyle = FlatStyle.Popup;
+            btnStart.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStart.Location = new Point(388, 608);
+            btnStart.Name = "btnStart";
+            btnStart.Size = new Size(120, 37);
+            btnStart.TabIndex = 3;
+            btnStart.Text = "Start";
+            btnStart.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(917, 657);
+            Controls.Add(btnStart);
             Controls.Add(label1);
             Controls.Add(lblInfo);
             Controls.Add(tableLayoutPanel1);
@@ -93,5 +107,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label lblInfo;
         private Label label1;
+        private Button btnStart;
     }
 }
