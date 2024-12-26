@@ -15,17 +15,14 @@ namespace MemoryMatchV1
 
         private void InitializeGame()
         {
-            // Create card values (10 pairs)
             cardValues = new List<string>
             {
                 "A", "A", "B", "B", "C", "C", "D", "D", "E", "E",
                 "F", "F", "G", "G", "H", "H", "I", "I", "J", "J"
             };
 
-            // Shuffle the card values
             cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
 
-            // Add buttons to the grid
             foreach (var value in cardValues)
             {
                 var button = new Button
@@ -37,10 +34,9 @@ namespace MemoryMatchV1
                     Tag = value
                 };
                 button.Click += Card_Click;
-                tableLayoutPanel1.Controls.Add(button); // Add button to the grid
+                tableLayoutPanel1.Controls.Add(button);
             }
 
-            // Initialize the flip timer
             flipTimer = new System.Windows.Forms.Timer
             {
                 Interval = 1000 // 1 second
@@ -56,7 +52,6 @@ namespace MemoryMatchV1
 
             if (firstCard == null)
             {
-                // First card flipped
                 firstCard = clickedCard;
                 ShowCard(firstCard);
                 return;
@@ -64,12 +59,10 @@ namespace MemoryMatchV1
 
             if (secondCard == null && clickedCard != firstCard)
             {
-                // Second card flipped
                 secondCard = clickedCard;
                 ShowCard(secondCard);
                 moves++;
 
-                // Check for match
                 if (firstCard.Tag.ToString() == secondCard.Tag.ToString())
                 {
                     firstCard.Enabled = false;
@@ -77,7 +70,6 @@ namespace MemoryMatchV1
                     firstCard = null;
                     secondCard = null;
 
-                    // Check if all pairs are found
                     if (tableLayoutPanel1.Controls.Cast<Button>().All(b => !b.Enabled))
                     {
                         MessageBox.Show($"You found all pairs in {moves} moves! Congratulations!");
@@ -85,7 +77,6 @@ namespace MemoryMatchV1
                 }
                 else
                 {
-                    // Start timer to flip back unmatched cards
                     flipTimer.Start();
                 }
             }
