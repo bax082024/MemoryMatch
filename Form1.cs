@@ -105,7 +105,7 @@ namespace MemoryMatchV1
 
             if (secondCard == null && clickedCard != firstCard)
             {
-                
+
 
                 secondCard = clickedCard;
                 ShowCard(secondCard);
@@ -251,7 +251,7 @@ namespace MemoryMatchV1
             {
                 string basePath = AppDomain.CurrentDomain.BaseDirectory; // Base path (bin/Debug)
                 string fullPath = Path.Combine(basePath, filePath); // Combine base path with relative path
-                
+
 
                 player.settings.volume = 100; // Ensure volume is set
                 player.URL = fullPath; // Use the full path
@@ -275,8 +275,16 @@ namespace MemoryMatchV1
             }
         }
 
-
-
+        private void Default_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.DarkSlateBlue,  // Top gradient
+                Color.MediumPurple,   // Bottom gradient
+                Color.LightCoral,     // Button default
+                Color.Orange,         // Button hover
+                Color.White           // Text color
+            );
+        }
 
     }
 }
