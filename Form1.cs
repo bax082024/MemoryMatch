@@ -24,6 +24,9 @@ namespace MemoryMatchV1
 
         }
 
+        // Shuffle the card values
+        cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
+
 
 
 
