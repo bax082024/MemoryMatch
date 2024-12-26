@@ -50,3 +50,8 @@ Welcome to the **Memory Match Game**, a fun and interactive card-matching game b
 - ![game](/Images/game.png)
 
 ---
+
+## Contact 
+
+- For questions or feedback, please contact:
+- **bax082024@gmail.com**
