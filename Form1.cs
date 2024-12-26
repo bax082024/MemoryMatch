@@ -269,7 +269,7 @@ namespace MemoryMatchV1
                 this.ClientRectangle,
                 Color.DarkSlateBlue, // Top color
                 Color.MediumPurple,  // Bottom color
-                LinearGradientMode.Vertical)) // Gradient direction
+                LinearGradientMode.Vertical)) 
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
@@ -278,22 +278,33 @@ namespace MemoryMatchV1
         private void Default_Click(object sender, EventArgs e)
         {
             ApplyTheme(
-                Color.DarkSlateBlue,  // Top gradient
-                Color.MediumPurple,   // Bottom gradient
-                Color.LightCoral,     // Button default
-                Color.Orange,         // Button hover
-                Color.White           // Text color
+                Color.DarkSlateBlue, 
+                Color.MediumPurple,  
+                Color.LightCoral, 
+                Color.Orange,
+                Color.White
             );
         }
 
         private void CoolBlues_Click(object sender, EventArgs e)
         {
             ApplyTheme(
-                Color.LightSkyBlue, // Top gradient
-                Color.DodgerBlue,   // Bottom gradient
-                Color.LightSteelBlue, // Button default
-                Color.RoyalBlue,    // Button hover
-                Color.White         // Text color
+                Color.LightSkyBlue, 
+                Color.DodgerBlue, 
+                Color.LightSteelBlue, 
+                Color.RoyalBlue,   
+                Color.White       
+            );
+        }
+
+        private void NatureGreens_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.LightGreen,   
+                Color.ForestGreen,   
+                Color.PaleGreen,  
+                Color.LimeGreen,    
+                Color.DarkGreen    
             );
         }
 
