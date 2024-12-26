@@ -61,9 +61,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.Black;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Ravie", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Coral;
+            label1.ForeColor = Color.OrangeRed;
             label1.Location = new Point(249, 9);
             label1.Name = "label1";
             label1.Size = new Size(416, 50);
@@ -102,12 +102,12 @@
             // lblMoves
             // 
             lblMoves.AutoSize = true;
-            lblMoves.BackColor = Color.Black;
-            lblMoves.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMoves.ForeColor = Color.IndianRed;
+            lblMoves.BackColor = Color.Transparent;
+            lblMoves.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMoves.ForeColor = Color.Firebrick;
             lblMoves.Location = new Point(415, 66);
             lblMoves.Name = "lblMoves";
-            lblMoves.Size = new Size(60, 15);
+            lblMoves.Size = new Size(67, 17);
             lblMoves.TabIndex = 5;
             lblMoves.Text = "Moves : 0";
             // 

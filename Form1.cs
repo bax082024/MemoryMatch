@@ -1,3 +1,4 @@
+using System.Drawing.Drawing2D;
 using WMPLib;
 
 
@@ -53,14 +54,25 @@ namespace MemoryMatchV1
                 var button = new Button
                 {
                     Dock = DockStyle.Fill,
-                    BackColor = Color.LightGray,
-                    Font = new Font("Arial", 14, FontStyle.Bold),
+                    BackColor = Color.LightCoral, // Set a nice color
+                    Font = new Font("Comic Sans MS", 14, FontStyle.Bold), // Use a fun font
                     Text = "",
-                    Tag = value
+                    Tag = value,
+                    FlatStyle = FlatStyle.Flat, // Use flat style for modern appearance
                 };
-                button.Click += Card_Click;
-                tableLayoutPanel1.Controls.Add(button);
+
+                // Customize the button border
+                button.FlatAppearance.BorderSize = 2;
+                button.FlatAppearance.BorderColor = Color.White;
+
+                // Add hover effects
+                button.MouseEnter += (s, e) => button.BackColor = Color.Orange; // Hover color
+                button.MouseLeave += (s, e) => button.BackColor = Color.LightCoral; // Default color
+
+                button.Click += Card_Click; // Existing click event
+                tableLayoutPanel1.Controls.Add(button); // Add button to the grid
             }
+
 
             flipAnimationTimer = new System.Windows.Forms.Timer
             {
@@ -251,11 +263,21 @@ namespace MemoryMatchV1
             }
         }
 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                this.ClientRectangle,
+                Color.DarkSlateBlue, // Top color
+                Color.MediumPurple,  // Bottom color
+                LinearGradientMode.Vertical)) // Gradient direction
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
 
 
 
 
-        
     }
 }
 
