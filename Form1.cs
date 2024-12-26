@@ -91,6 +91,18 @@ namespace MemoryMatchV1
             }
         }
 
+        private void FlipTimer_Tick(object sender, EventArgs e)
+        {
+            // Hide unmatched cards
+            HideCard(firstCard);
+            HideCard(secondCard);
+            firstCard = null;
+            secondCard = null;
+            flipTimer.Stop();
+        }
+
+
+
 
 
 
