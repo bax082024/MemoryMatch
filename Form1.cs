@@ -22,10 +22,27 @@ namespace MemoryMatchV1
                 "F", "F", "G", "G", "H", "H", "I", "I", "J", "J"
             };
 
+            // Shuffle the card values
+            cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
+
+            // Add buttons to the grid
+            foreach (var value in cardValues)
+            {
+                var button = new Button
+                {
+                    Dock = DockStyle.Fill,
+                    BackColor = Color.LightGray,
+                    Font = new Font("Arial", 14, FontStyle.Bold),
+                    Text = "", // Initially hidden
+                    Tag = value // Store the card value in Tag
+                };
+                button.Click += Card_Click;
+                tableLayoutPanel1.Controls.Add(button); // Add button to the grid
+            }
+
         }
 
-        // Shuffle the card values
-        cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
+
 
 
 
