@@ -17,8 +17,16 @@ namespace MemoryMatchV1
         {
             cardValues = new List<string>
             {
-                "A", "A", "B", "B", "C", "C", "D", "D", "E", "E",
-                "F", "F", "G", "G", "H", "H", "I", "I", "J", "J"
+                "Image/Cards/1.png", "Image/Cards/1.png",
+                "Image/Cards/2.png", "Image/Cards/2.png",
+                "Image/Cards/3.png", "Image/Cards/3.png",
+                "Image/Cards/4.png", "Image/Cards/4.png",
+                "Image/Cards/5.png", "Image/Cards/5.png",
+                "Image/Cards/6.png", "Image/Cards/6.png",
+                "Image/Cards/7.png", "Image/Cards/7.png",
+                "Image/Cards/8.png", "Image/Cards/8.png",
+                "Image/Cards/9.png", "Image/Cards/9.png",
+                "Image/Cards/10.png", "Image/Cards/10.png"
             };
 
             cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
