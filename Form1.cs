@@ -21,6 +21,10 @@ namespace MemoryMatchV1
 
         private WMPLib.WindowsMediaPlayer player;
 
+        private Color _topGradientColor = Color.DarkSlateBlue;
+        private Color _bottomGradientColor = Color.MediumPurple;
+
+
 
         public Form1()
         {
@@ -263,15 +267,17 @@ namespace MemoryMatchV1
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            base.OnPaint(e);
             using (LinearGradientBrush brush = new LinearGradientBrush(
                 this.ClientRectangle,
-                Color.DarkSlateBlue, // Top color
-                Color.MediumPurple,  // Bottom color
+                _topGradientColor,    // Top color
+                _bottomGradientColor, // Bottom color
                 LinearGradientMode.Vertical)) 
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
         }
+
 
         private void Default_Click(object sender, EventArgs e)
         {
@@ -341,17 +347,10 @@ namespace MemoryMatchV1
 
         private void ApplyTheme(Color topGradient, Color bottomGradient, Color buttonDefault, Color buttonHover, Color textColor)
         {
-            this.Paint += (s, e) =>
-            {
-                using (LinearGradientBrush brush = new LinearGradientBrush(
-                    this.ClientRectangle,
-                    topGradient, 
-                    bottomGradient, 
-                    LinearGradientMode.Vertical)) 
-                {
-                    e.Graphics.FillRectangle(brush, this.ClientRectangle);
-                }
-            };
+            _topGradientColor = topGradient;
+            _bottomGradientColor = bottomGradient;
+
+            this.Invalidate();
 
             foreach (Button button in tableLayoutPanel1.Controls.OfType<Button>())
             {
@@ -367,9 +366,10 @@ namespace MemoryMatchV1
 
             lblTitle.ForeColor = textColor;
             lblMoves.ForeColor = textColor;
-
-            this.Invalidate();
         }
+
+
+
 
 
     }
