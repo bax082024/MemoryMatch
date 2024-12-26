@@ -81,7 +81,7 @@
             // 
             // btnStart
             // 
-            btnStart.BackColor = SystemColors.ControlLight;
+            btnStart.BackColor = Color.OliveDrab;
             btnStart.FlatStyle = FlatStyle.Popup;
             btnStart.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStart.Location = new Point(394, 615);
@@ -140,42 +140,42 @@
             // defaultToolStripMenuItem
             // 
             defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            defaultToolStripMenuItem.Size = new Size(180, 22);
+            defaultToolStripMenuItem.Size = new Size(155, 22);
             defaultToolStripMenuItem.Text = "Default";
             defaultToolStripMenuItem.Click += Default_Click;
             // 
             // coolBluesToolStripMenuItem
             // 
             coolBluesToolStripMenuItem.Name = "coolBluesToolStripMenuItem";
-            coolBluesToolStripMenuItem.Size = new Size(180, 22);
+            coolBluesToolStripMenuItem.Size = new Size(155, 22);
             coolBluesToolStripMenuItem.Text = "Cool Blues";
             coolBluesToolStripMenuItem.Click += CoolBlues_Click;
             // 
             // natureGreensToolStripMenuItem
             // 
             natureGreensToolStripMenuItem.Name = "natureGreensToolStripMenuItem";
-            natureGreensToolStripMenuItem.Size = new Size(180, 22);
+            natureGreensToolStripMenuItem.Size = new Size(155, 22);
             natureGreensToolStripMenuItem.Text = "Nature Greens";
             natureGreensToolStripMenuItem.Click += NatureGreens_Click;
             // 
             // elegantPurplesToolStripMenuItem
             // 
             elegantPurplesToolStripMenuItem.Name = "elegantPurplesToolStripMenuItem";
-            elegantPurplesToolStripMenuItem.Size = new Size(180, 22);
+            elegantPurplesToolStripMenuItem.Size = new Size(155, 22);
             elegantPurplesToolStripMenuItem.Text = "Elegant Purples";
             elegantPurplesToolStripMenuItem.Click += ElegantPurples_Click;
             // 
             // brightFunToolStripMenuItem
             // 
             brightFunToolStripMenuItem.Name = "brightFunToolStripMenuItem";
-            brightFunToolStripMenuItem.Size = new Size(180, 22);
+            brightFunToolStripMenuItem.Size = new Size(155, 22);
             brightFunToolStripMenuItem.Text = "Bright Fun";
             brightFunToolStripMenuItem.Click += BrightFun_Click;
             // 
             // matrixToolStripMenuItem
             // 
             matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
-            matrixToolStripMenuItem.Size = new Size(180, 22);
+            matrixToolStripMenuItem.Size = new Size(155, 22);
             matrixToolStripMenuItem.Text = "Matrix";
             matrixToolStripMenuItem.Click += Matrix_Click;
             // 
