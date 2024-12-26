@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MemoryMatchV1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c9e244db2607566ebfe267c4b55931c5ea25302")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03893ad20c240ad4f4ada401e103e426708109ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("MemoryMatchV1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MemoryMatchV1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

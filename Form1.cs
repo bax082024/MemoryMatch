@@ -122,24 +122,22 @@ namespace MemoryMatchV1
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            firstCard = null;
-            secondCard = null;
+            // Reset moves counter
             moves = 0;
+            lblMoves.Text = "Moves: 0";
 
-            cardValues = new List<string>
-            {
-                "A", "A", "B", "B", "C", "C", "D", "D", "E", "E",
-                "F", "F", "G", "G", "H", "H", "I", "I", "J", "J"
-            };
+            // Shuffle card values
             cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
 
+            // Assign each card value to a button
             int i = 0;
             foreach (Button button in tableLayoutPanel1.Controls.OfType<Button>())
             {
-                button.Text = "";
-                button.Tag = cardValues[i];
-                button.BackColor = Color.LightGray;
-                button.Enabled = true;
+                button.Tag = cardValues[i]; // Assign image file path to Tag
+                button.Text = ""; // Hide text
+                button.BackColor = Color.LightGray; // Reset color
+                button.Enabled = true; // Enable button
+                button.BackgroundImage = null; // Clear any existing image
                 i++;
             }
         }
