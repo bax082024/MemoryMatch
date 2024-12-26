@@ -7,6 +7,14 @@ namespace MemoryMatchV1
         private System.Windows.Forms.Timer flipTimer;
         private int moves = 0;
 
+        private System.Windows.Forms.Timer flipAnimationTimer;
+        private Button? animatingCard;
+        private bool isShrinking = true;
+        private int animationStep = 5;
+        private bool isHiding = false;
+        private Button? hidingCard = null;
+        private int animationProgress = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +54,13 @@ namespace MemoryMatchV1
                 tableLayoutPanel1.Controls.Add(button);
             }
 
+            flipAnimationTimer = new System.Windows.Forms.Timer
+            {
+                Interval = 30 // Adjust for smoother or faster animations
+            };
+            flipAnimationTimer.Tick += FlipAnimationTimer_Tick;
+
+
             flipTimer = new System.Windows.Forms.Timer
             {
                 Interval = 1000 // 1 second
@@ -71,11 +86,9 @@ namespace MemoryMatchV1
                 secondCard = clickedCard;
                 ShowCard(secondCard);
 
-                // Increment moves counter
                 moves++;
                 lblMoves.Text = $"Moves: {moves}";
 
-                // Check for match
                 if (firstCard.Tag.ToString() == secondCard.Tag.ToString())
                 {
                     firstCard.Enabled = false;
@@ -83,7 +96,6 @@ namespace MemoryMatchV1
                     firstCard = null;
                     secondCard = null;
 
-                    // Check if all pairs are found
                     if (tableLayoutPanel1.Controls.Cast<Button>().All(b => !b.Enabled))
                     {
                         MessageBox.Show($"You found all pairs in {moves} moves! Congratulations!");
@@ -99,49 +111,106 @@ namespace MemoryMatchV1
 
         private void FlipTimer_Tick(object sender, EventArgs e)
         {
-            HideCard(firstCard);
-            HideCard(secondCard);
-            firstCard = null;
-            secondCard = null;
             flipTimer.Stop();
+            HideCard(firstCard, secondCard);
         }
 
         private void ShowCard(Button card)
         {
-            card.Text = "";
-            card.BackColor = Color.White;
-            card.BackgroundImage = Image.FromFile(card.Tag.ToString());
-            card.BackgroundImageLayout = ImageLayout.Stretch;
+            animatingCard = card;
+            animationProgress = 0;
+            flipAnimationTimer.Start();
         }
 
-        private void HideCard(Button card)
+        private void HideCard(Button card1, Button card2)
         {
-            card.Text = "";
-            card.BackColor = Color.LightGray;
-            card.BackgroundImage = null;
+            firstCard = card1;
+            secondCard = card2;
+            isHiding = true;
+            animationProgress = 0;
+            flipAnimationTimer.Start();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            // Reset moves counter
             moves = 0;
             lblMoves.Text = "Moves: 0";
 
-            // Shuffle card values
             cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
 
-            // Assign each card value to a button
             int i = 0;
             foreach (Button button in tableLayoutPanel1.Controls.OfType<Button>())
             {
-                button.Tag = cardValues[i]; // Assign image file path to Tag
-                button.Text = ""; // Hide text
-                button.BackColor = Color.LightGray; // Reset color
-                button.Enabled = true; // Enable button
-                button.BackgroundImage = null; // Clear any existing image
+                button.Tag = cardValues[i];
+                button.Text = "";
+                button.BackColor = Color.LightGray;
+                button.Enabled = true;
+                button.BackgroundImage = null;
                 i++;
             }
         }
+
+        private void FlipAnimationTimer_Tick(object sender, EventArgs e)
+        {
+            if (isHiding)
+            {
+                if (animationProgress < 5)
+                {
+                    firstCard.BackColor = Color.Gray;
+                    secondCard.BackColor = Color.Gray;
+                    animationProgress++;
+                }
+                else if (animationProgress == 5)
+                {
+                    firstCard.BackgroundImage = null;
+                    firstCard.BackColor = Color.LightGray;
+
+                    secondCard.BackgroundImage = null;
+                    secondCard.BackColor = Color.LightGray;
+
+                    animationProgress++;
+                }
+                else
+                {
+                    animationProgress = 0;
+                    flipAnimationTimer.Stop();
+
+                    firstCard = null;
+                    secondCard = null;
+                    isHiding = false;
+                }
+            }
+            else
+            {
+                if (animatingCard == null)
+                {
+                    flipAnimationTimer.Stop();
+                    return;
+                }
+
+                if (animationProgress < 5)
+                {
+                    animatingCard.BackColor = Color.Gray;
+                    animationProgress++;
+                }
+                else if (animationProgress == 5)
+                {
+                    animatingCard.BackgroundImage = Image.FromFile(animatingCard.Tag.ToString());
+                    animatingCard.BackgroundImageLayout = ImageLayout.Stretch;
+
+                    animationProgress++;
+                }
+                else
+                {
+                    animationProgress = 0;
+                    flipAnimationTimer.Stop();
+
+                    animatingCard = null;
+                }
+            }
+        }
+
+
     }
 }
 
