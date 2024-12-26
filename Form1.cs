@@ -5,7 +5,7 @@ namespace MemoryMatchV1
         private List<string> cardValues = new List<string>();
         private Button? firstCard = null, secondCard = null;
         private System.Windows.Forms.Timer flipTimer;
-        private int moves = 0; 
+        private int moves = 0;
 
         public Form1()
         {
@@ -33,7 +33,7 @@ namespace MemoryMatchV1
                     Dock = DockStyle.Fill,
                     BackColor = Color.LightGray,
                     Font = new Font("Arial", 14, FontStyle.Bold),
-                    Text = "", 
+                    Text = "",
                     Tag = value
                 };
                 button.Click += Card_Click;
@@ -114,9 +114,9 @@ namespace MemoryMatchV1
             card.Text = "";
             card.BackColor = Color.LightGray;
         }
-        
-        private void Start_Click(object sender, EventArgs e)
-        {           
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
             firstCard = null;
             secondCard = null;
             moves = 0;
@@ -138,7 +138,6 @@ namespace MemoryMatchV1
                 i++;
             }
         }
-
     }
 }
 
