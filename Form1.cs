@@ -101,6 +101,13 @@ namespace MemoryMatchV1
             flipTimer.Stop();
         }
 
+        private void ShowCard(Button card)
+        {
+            // Show the card value
+            card.Text = card.Tag.ToString();
+            card.BackColor = Color.White;
+        }
+
 
 
 
