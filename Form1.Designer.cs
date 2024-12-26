@@ -34,7 +34,6 @@
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             lblMoves = new Label();
-            button1 = new Button();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -103,6 +102,7 @@
             // lblMoves
             // 
             lblMoves.AutoSize = true;
+            lblMoves.BackColor = Color.Black;
             lblMoves.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMoves.ForeColor = Color.IndianRed;
             lblMoves.Location = new Point(415, 66);
@@ -111,23 +111,12 @@
             lblMoves.TabIndex = 5;
             lblMoves.Text = "Moves : 0";
             // 
-            // button1
-            // 
-            button1.Location = new Point(99, 33);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 6;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateGray;
+            BackColor = Color.FromArgb(30, 30, 30);
             ClientSize = new Size(917, 671);
-            Controls.Add(button1);
             Controls.Add(lblMoves);
             Controls.Add(statusStrip1);
             Controls.Add(btnStart);
@@ -149,6 +138,5 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private Label lblMoves;
-        private Button button1;
     }
 }
