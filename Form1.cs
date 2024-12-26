@@ -157,7 +157,37 @@ namespace MemoryMatchV1
 
         private void FlipAnimationTimer_Tick(object sender, EventArgs e)
         {
+            if (animatingCard == null)
+            {
+                flipAnimationTimer.Stop();
+                return;
+            }
 
+            // Shrink the card
+            if (isShrinking)
+            {
+                animatingCard.Width -= animationStep;
+                if (animatingCard.Width <= 10) // Stop shrinking
+                {
+                    isShrinking = false;
+
+                    // Show the card image
+                    animatingCard.BackgroundImage = Image.FromFile(animatingCard.Tag.ToString());
+                    animatingCard.BackgroundImageLayout = ImageLayout.Stretch;
+                }
+            }
+            // Grow the card back
+            else
+            {
+                animatingCard.Width += animationStep;
+                if (animatingCard.Width >= 100) // Replace 100 with the original size
+                {
+                    animatingCard.Width = 100; // Ensure it restores exactly
+                    flipAnimationTimer.Stop();
+                    animatingCard = null; // Reset the animating card
+                    isShrinking = true;
+                }
+            }
 
         }
 
