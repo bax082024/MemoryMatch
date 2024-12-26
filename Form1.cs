@@ -107,8 +107,10 @@ namespace MemoryMatchV1
 
         private void ShowCard(Button card)
         {
-            card.Text = card.Tag.ToString();
+            card.Text = ""; // Clear text
             card.BackColor = Color.White;
+            card.BackgroundImage = Image.FromFile(card.Tag.ToString());
+            card.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void HideCard(Button card)
