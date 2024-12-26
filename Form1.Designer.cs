@@ -31,6 +31,9 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             btnStart = new Button();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -44,7 +47,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.Location = new Point(60, 99);
+            tableLayoutPanel1.Location = new Point(60, 84);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
@@ -69,7 +72,7 @@
             btnStart.BackColor = SystemColors.ControlLight;
             btnStart.FlatStyle = FlatStyle.Popup;
             btnStart.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnStart.Location = new Point(388, 608);
+            btnStart.Location = new Point(391, 590);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(120, 37);
             btnStart.TabIndex = 3;
@@ -77,17 +80,36 @@
             btnStart.UseVisualStyleBackColor = false;
             btnStart.Click += btnStart_Click;
             // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 649);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(917, 22);
+            statusStrip1.TabIndex = 4;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.BackColor = Color.Transparent;
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(74, 17);
+            toolStripStatusLabel1.Text = "Bax Creation";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(917, 657);
+            ClientSize = new Size(917, 671);
+            Controls.Add(statusStrip1);
             Controls.Add(btnStart);
             Controls.Add(label1);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Memory Match";
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,5 +119,7 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
         private Button btnStart;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
