@@ -47,6 +47,6 @@ Welcome to the **Memory Match Game**, a fun and interactive card-matching game b
 
 ## Screenshot
 
-- [game](/Images/game.png)
+- ![game](/Images/game.png)
 
 ---
