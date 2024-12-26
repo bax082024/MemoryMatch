@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            label1 = new Label();
+            lblTitle = new Label();
             btnStart = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
@@ -67,17 +67,17 @@
             tableLayoutPanel1.Size = new Size(785, 491);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // lblTitle
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Ravie", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.OrangeRed;
-            label1.Location = new Point(253, 45);
-            label1.Name = "label1";
-            label1.Size = new Size(416, 50);
-            label1.TabIndex = 2;
-            label1.Text = "Memory Match";
+            lblTitle.AutoSize = true;
+            lblTitle.BackColor = Color.Transparent;
+            lblTitle.Font = new Font("Ravie", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.OrangeRed;
+            lblTitle.Location = new Point(253, 45);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(416, 50);
+            lblTitle.TabIndex = 2;
+            lblTitle.Text = "Memory Match";
             // 
             // btnStart
             // 
@@ -140,38 +140,37 @@
             // defaultToolStripMenuItem
             // 
             defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            defaultToolStripMenuItem.Size = new Size(180, 22);
+            defaultToolStripMenuItem.Size = new Size(155, 22);
             defaultToolStripMenuItem.Text = "Default";
-            defaultToolStripMenuItem.Click += defaultToolStripMenuItem_Click;
             // 
             // coolBluesToolStripMenuItem
             // 
             coolBluesToolStripMenuItem.Name = "coolBluesToolStripMenuItem";
-            coolBluesToolStripMenuItem.Size = new Size(180, 22);
+            coolBluesToolStripMenuItem.Size = new Size(155, 22);
             coolBluesToolStripMenuItem.Text = "Cool Blues";
             // 
             // natureGreensToolStripMenuItem
             // 
             natureGreensToolStripMenuItem.Name = "natureGreensToolStripMenuItem";
-            natureGreensToolStripMenuItem.Size = new Size(180, 22);
+            natureGreensToolStripMenuItem.Size = new Size(155, 22);
             natureGreensToolStripMenuItem.Text = "Nature Greens";
             // 
             // elegantPurplesToolStripMenuItem
             // 
             elegantPurplesToolStripMenuItem.Name = "elegantPurplesToolStripMenuItem";
-            elegantPurplesToolStripMenuItem.Size = new Size(180, 22);
+            elegantPurplesToolStripMenuItem.Size = new Size(155, 22);
             elegantPurplesToolStripMenuItem.Text = "Elegant Purples";
             // 
             // brightFunToolStripMenuItem
             // 
             brightFunToolStripMenuItem.Name = "brightFunToolStripMenuItem";
-            brightFunToolStripMenuItem.Size = new Size(180, 22);
+            brightFunToolStripMenuItem.Size = new Size(155, 22);
             brightFunToolStripMenuItem.Text = "Bright Fun";
             // 
             // matrixToolStripMenuItem
             // 
             matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
-            matrixToolStripMenuItem.Size = new Size(180, 22);
+            matrixToolStripMenuItem.Size = new Size(155, 22);
             matrixToolStripMenuItem.Text = "Matrix";
             // 
             // Form1
@@ -184,7 +183,7 @@
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             Controls.Add(btnStart);
-            Controls.Add(label1);
+            Controls.Add(lblTitle);
             Controls.Add(tableLayoutPanel1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
@@ -200,7 +199,7 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Label label1;
+        private Label lblTitle;
         private Button btnStart;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;

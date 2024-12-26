@@ -298,6 +298,44 @@ namespace MemoryMatchV1
         }
 
 
+        private void ApplyTheme(Color topGradient, Color bottomGradient, Color buttonDefault, Color buttonHover, Color textColor)
+        {
+            // Update gradient background
+            this.Paint += (s, e) =>
+            {
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    this.ClientRectangle,
+                    topGradient, // Top gradient color
+                    bottomGradient, // Bottom gradient color
+                    LinearGradientMode.Vertical)) // Gradient direction
+                {
+                    e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                }
+            };
+
+            // Update button colors
+            foreach (Button button in tableLayoutPanel1.Controls.OfType<Button>())
+            {
+                button.BackColor = buttonDefault;
+                button.FlatAppearance.BorderColor = textColor;
+
+                // Clear previous hover events to avoid stacking
+                button.MouseEnter -= (s, e) => button.BackColor = buttonHover;
+                button.MouseLeave -= (s, e) => button.BackColor = buttonDefault;
+
+                button.MouseEnter += (s, e) => button.BackColor = buttonHover;
+                button.MouseLeave += (s, e) => button.BackColor = buttonDefault;
+            }
+
+            // Update text colors
+            lblTitle.ForeColor = textColor;
+            lblMoves.ForeColor = textColor;
+
+            // Force repaint
+            this.Invalidate();
+        }
+
+
     }
 }
 
