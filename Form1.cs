@@ -11,6 +11,8 @@ namespace MemoryMatchV1
         private Button? animatingCard;
         private bool isShrinking = true;
         private int animationStep = 5; // The step size for shrinking/growing
+        private bool isHiding = false;
+        private Button? hidingCard = null;
 
         public Form1()
         {
@@ -120,17 +122,15 @@ namespace MemoryMatchV1
 
         private void ShowCard(Button card)
         {
-            card.Text = "";
-            card.BackColor = Color.White;
-            card.BackgroundImage = Image.FromFile(card.Tag.ToString());
-            card.BackgroundImageLayout = ImageLayout.Stretch;
+            animatingCard = card;
+            flipAnimationTimer.Start();
         }
 
         private void HideCard(Button card)
         {
-            card.Text = "";
-            card.BackColor = Color.LightGray;
-            card.BackgroundImage = null;
+            hidingCard = card;
+            isHiding = true; // Set the hiding flag
+            flipAnimationTimer.Start(); // Start the animation
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -157,7 +157,9 @@ namespace MemoryMatchV1
 
         private void FlipAnimationTimer_Tick(object sender, EventArgs e)
         {
-            if (animatingCard == null)
+            Button? card = isHiding ? hidingCard : animatingCard;
+
+            if (card == null)
             {
                 flipAnimationTimer.Stop();
                 return;
@@ -166,30 +168,49 @@ namespace MemoryMatchV1
             // Shrink the card
             if (isShrinking)
             {
-                animatingCard.Width -= animationStep;
-                if (animatingCard.Width <= 10) // Stop shrinking
+                card.Width -= animationStep;
+                if (card.Width <= 10) // Stop shrinking
                 {
                     isShrinking = false;
 
-                    // Show the card image
-                    animatingCard.BackgroundImage = Image.FromFile(animatingCard.Tag.ToString());
-                    animatingCard.BackgroundImageLayout = ImageLayout.Stretch;
+                    if (isHiding)
+                    {
+                        // Clear the card image when hiding
+                        card.BackgroundImage = null;
+                        card.BackColor = Color.LightGray;
+                    }
+                    else
+                    {
+                        // Show the card image when revealing
+                        card.BackgroundImage = Image.FromFile(card.Tag.ToString());
+                        card.BackgroundImageLayout = ImageLayout.Stretch;
+                    }
                 }
             }
             // Grow the card back
             else
             {
-                animatingCard.Width += animationStep;
-                if (animatingCard.Width >= 100) // Replace 100 with the original size
+                card.Width += animationStep;
+                if (card.Width >= 100) // Replace 100 with the original size
                 {
-                    animatingCard.Width = 100; // Ensure it restores exactly
+                    card.Width = 100; // Ensure it restores exactly
                     flipAnimationTimer.Stop();
-                    animatingCard = null; // Reset the animating card
                     isShrinking = true;
+
+                    // Reset based on action
+                    if (isHiding)
+                    {
+                        hidingCard = null;
+                        isHiding = false;
+                    }
+                    else
+                    {
+                        animatingCard = null;
+                    }
                 }
             }
-
         }
+
 
 
 
