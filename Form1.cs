@@ -51,6 +51,13 @@ namespace MemoryMatchV1
                 tableLayoutPanel1.Controls.Add(button);
             }
 
+            flipAnimationTimer = new System.Windows.Forms.Timer
+            {
+                Interval = 30 // Adjust for smoother or faster animations
+            };
+            flipAnimationTimer.Tick += FlipAnimationTimer_Tick;
+
+
             flipTimer = new System.Windows.Forms.Timer
             {
                 Interval = 1000 // 1 second
