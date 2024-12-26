@@ -69,6 +69,7 @@
             // 
             // lblTitle
             // 
+            lblTitle.Anchor = AnchorStyles.None;
             lblTitle.AutoSize = true;
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Ravie", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -81,10 +82,11 @@
             // 
             // btnStart
             // 
-            btnStart.BackColor = SystemColors.ControlLight;
+            btnStart.Anchor = AnchorStyles.None;
+            btnStart.BackColor = Color.OliveDrab;
             btnStart.FlatStyle = FlatStyle.Popup;
             btnStart.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnStart.Location = new Point(394, 615);
+            btnStart.Location = new Point(394, 620);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(120, 37);
             btnStart.TabIndex = 3;
@@ -110,6 +112,7 @@
             // 
             // lblMoves
             // 
+            lblMoves.Anchor = AnchorStyles.None;
             lblMoves.AutoSize = true;
             lblMoves.BackColor = Color.Transparent;
             lblMoves.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -140,42 +143,42 @@
             // defaultToolStripMenuItem
             // 
             defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            defaultToolStripMenuItem.Size = new Size(180, 22);
+            defaultToolStripMenuItem.Size = new Size(155, 22);
             defaultToolStripMenuItem.Text = "Default";
             defaultToolStripMenuItem.Click += Default_Click;
             // 
             // coolBluesToolStripMenuItem
             // 
             coolBluesToolStripMenuItem.Name = "coolBluesToolStripMenuItem";
-            coolBluesToolStripMenuItem.Size = new Size(180, 22);
+            coolBluesToolStripMenuItem.Size = new Size(155, 22);
             coolBluesToolStripMenuItem.Text = "Cool Blues";
             coolBluesToolStripMenuItem.Click += CoolBlues_Click;
             // 
             // natureGreensToolStripMenuItem
             // 
             natureGreensToolStripMenuItem.Name = "natureGreensToolStripMenuItem";
-            natureGreensToolStripMenuItem.Size = new Size(180, 22);
+            natureGreensToolStripMenuItem.Size = new Size(155, 22);
             natureGreensToolStripMenuItem.Text = "Nature Greens";
             natureGreensToolStripMenuItem.Click += NatureGreens_Click;
             // 
             // elegantPurplesToolStripMenuItem
             // 
             elegantPurplesToolStripMenuItem.Name = "elegantPurplesToolStripMenuItem";
-            elegantPurplesToolStripMenuItem.Size = new Size(180, 22);
+            elegantPurplesToolStripMenuItem.Size = new Size(155, 22);
             elegantPurplesToolStripMenuItem.Text = "Elegant Purples";
             elegantPurplesToolStripMenuItem.Click += ElegantPurples_Click;
             // 
             // brightFunToolStripMenuItem
             // 
             brightFunToolStripMenuItem.Name = "brightFunToolStripMenuItem";
-            brightFunToolStripMenuItem.Size = new Size(180, 22);
+            brightFunToolStripMenuItem.Size = new Size(155, 22);
             brightFunToolStripMenuItem.Text = "Bright Fun";
             brightFunToolStripMenuItem.Click += BrightFun_Click;
             // 
             // matrixToolStripMenuItem
             // 
             matrixToolStripMenuItem.Name = "matrixToolStripMenuItem";
-            matrixToolStripMenuItem.Size = new Size(180, 22);
+            matrixToolStripMenuItem.Size = new Size(155, 22);
             matrixToolStripMenuItem.Text = "Matrix";
             matrixToolStripMenuItem.Click += Matrix_Click;
             // 
@@ -193,6 +196,7 @@
             Controls.Add(tableLayoutPanel1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Memory Match";
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
