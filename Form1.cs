@@ -15,7 +15,12 @@ namespace MemoryMatchV1
 
         private void InitializeGame()
         {
-
+            // Create card values (10 pairs)
+            cardValues = new List<string>
+            {
+                "A", "A", "B", "B", "C", "C", "D", "D", "E", "E",
+                "F", "F", "G", "G", "H", "H", "I", "I", "J", "J"
+            };
 
         }
 
