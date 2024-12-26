@@ -54,8 +54,41 @@ namespace MemoryMatchV1
         {
             var clickedCard = sender as Button;
 
+            if (firstCard == null)
+            {
+                // First card flipped
+                firstCard = clickedCard;
+                ShowCard(firstCard);
+                return;
+            }
 
+            if (secondCard == null && clickedCard != firstCard)
+            {
+                // Second card flipped
+                secondCard = clickedCard;
+                ShowCard(secondCard);
+                moves++; // Increment move counter
 
+                // Check for match
+                if (firstCard.Tag.ToString() == secondCard.Tag.ToString())
+                {
+                    firstCard.Enabled = false;
+                    secondCard.Enabled = false;
+                    firstCard = null;
+                    secondCard = null;
+
+                    // Check if all pairs are found
+                    if (tableLayoutPanel1.Controls.Cast<Button>().All(b => !b.Enabled))
+                    {
+                        MessageBox.Show($"You found all pairs in {moves} moves! Congratulations!");
+                    }
+                }
+                else
+                {
+                    // Start timer to flip back unmatched cards
+                    flipTimer.Start();
+                }
+            }
         }
 
 
