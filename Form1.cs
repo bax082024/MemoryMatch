@@ -215,6 +215,12 @@ namespace MemoryMatchV1
             }
         }
 
+        private void PlaySound()
+        {
+            player.URL = filePath;
+            player.controls.play();
+        }
+
 
     }
 }
