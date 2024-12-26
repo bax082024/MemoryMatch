@@ -319,6 +319,16 @@ namespace MemoryMatchV1
             );
         }
 
+        private void BrightFun_Click(object sender, EventArgs e)
+        {
+            ApplyTheme(
+                Color.Gold,         
+                Color.OrangeRed,   
+                Color.PeachPuff,     
+                Color.Tomato,       
+                Color.DarkRed       
+            );
+        }
 
 
 
