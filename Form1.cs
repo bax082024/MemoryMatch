@@ -1,3 +1,6 @@
+using WMPLib;
+
+
 namespace MemoryMatchV1
 {
     public partial class Form1 : Form
@@ -81,6 +84,8 @@ namespace MemoryMatchV1
 
             if (firstCard == null)
             {
+                PlaySound("/Sounds/match.mp3");
+
                 firstCard = clickedCard;
                 ShowCard(firstCard);
                 return;
@@ -88,6 +93,8 @@ namespace MemoryMatchV1
 
             if (secondCard == null && clickedCard != firstCard)
             {
+                PlaySound("/Sounds/match.mp3");
+
                 secondCard = clickedCard;
                 ShowCard(secondCard);
 
@@ -117,6 +124,9 @@ namespace MemoryMatchV1
         private void FlipTimer_Tick(object sender, EventArgs e)
         {
             flipTimer.Stop();
+
+            PlaySound("/Sounds/flip.mp3");
+
             HideCard(firstCard, secondCard);
         }
 
@@ -125,6 +135,9 @@ namespace MemoryMatchV1
             animatingCard = card;
             animationProgress = 0;
             flipAnimationTimer.Start();
+
+            // Play flip sound
+            PlaySound("Sounds/flip.mp3");
         }
 
         private void HideCard(Button card1, Button card2)
@@ -153,6 +166,8 @@ namespace MemoryMatchV1
                 button.BackgroundImage = null;
                 i++;
             }
+
+            PlaySound("Sounds/start.mp3");
         }
 
         private void FlipAnimationTimer_Tick(object sender, EventArgs e)
@@ -215,13 +230,28 @@ namespace MemoryMatchV1
             }
         }
 
-        private void PlaySound()
+        private void PlaySound(string filePath)
         {
-            player.URL = filePath;
-            player.controls.play();
+            try
+            {
+               
+                player.settings.volume = 100; // Ensure volume is set
+                player.URL = filePath; // Set the file URL
+                player.controls.play(); // Play the sound
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error playing sound: {ex.Message}");
+            }
         }
 
 
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PlaySound(@"C:\HjemmeKode\C-Sharp\MyProjects\MemoryMatch\bin\Debug\net8.0-windows\Sounds\win.mp3");
+        }
     }
 }
 

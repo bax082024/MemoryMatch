@@ -19,8 +19,7 @@
     <None Remove="Images\Cards\card7.png" />
     <None Remove="Images\Cards\card8.png" />
     <None Remove="Images\Cards\card9.png" />
-    <None Remove="Sounds\flipcard.mp3" />
-    <None Remove="Sounds\matching.mp3" />
+    <None Remove="Sounds\start.mp3" />
     <None Remove="Sounds\win.mp3" />
   </ItemGroup>
 
@@ -67,15 +66,18 @@
     <EmbeddedResource Include="Images\Cards\card9.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sounds\flipcard.mp3">
+    <Content Include="Sounds\flip.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sounds\matching.mp3">
+    </Content>
+    <Content Include="Sounds\match.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sounds\win.mp3">
+    </Content>
+    <Content Include="Sounds\start.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Content>
+    <Content Include="Sounds\win.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
