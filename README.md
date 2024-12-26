@@ -36,3 +36,11 @@ Welcome to the **Memory Match Game**, a fun and interactive card-matching game b
 3. Click **Rebuild Solution**
 
 ---
+
+## How to Play
+
+1. Press Run button or f5.
+2. Press Start Button.
+3. Try to find the matching pairs.
+
+---
