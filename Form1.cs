@@ -15,10 +15,15 @@ namespace MemoryMatchV1
         private Button? hidingCard = null;
         private int animationProgress = 0;
 
+        private WMPLib.WindowsMediaPlayer player;
+
+
         public Form1()
         {
             InitializeComponent();
             InitializeGame();
+            player = new WMPLib.WindowsMediaPlayer();
+
         }
 
         private void InitializeGame()
