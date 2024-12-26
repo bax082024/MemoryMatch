@@ -28,3 +28,11 @@ Welcome to the **Memory Match Game**, a fun and interactive card-matching game b
 
 ---
 
+## How to Install
+
+1. **Clone Repository:**
+	- **https://github.com/bax082024/MemoryMatchV1.git**
+2. Open project in **Visual Studio**.
+3. Click **Rebuild Solution**
+
+---
