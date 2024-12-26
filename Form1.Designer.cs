@@ -33,6 +33,7 @@
             btnStart = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            lblMoves = new Label();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,7 +61,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Black;
             label1.Font = new Font("Ravie", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Coral;
             label1.Location = new Point(249, 9);
             label1.Name = "label1";
             label1.Size = new Size(416, 50);
@@ -96,12 +99,24 @@
             toolStripStatusLabel1.Size = new Size(74, 17);
             toolStripStatusLabel1.Text = "Bax Creation";
             // 
+            // lblMoves
+            // 
+            lblMoves.AutoSize = true;
+            lblMoves.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMoves.ForeColor = Color.IndianRed;
+            lblMoves.Location = new Point(415, 66);
+            lblMoves.Name = "lblMoves";
+            lblMoves.Size = new Size(60, 15);
+            lblMoves.TabIndex = 5;
+            lblMoves.Text = "Moves : 0";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
+            BackColor = Color.DarkSlateGray;
             ClientSize = new Size(917, 671);
+            Controls.Add(lblMoves);
             Controls.Add(statusStrip1);
             Controls.Add(btnStart);
             Controls.Add(label1);
@@ -121,5 +136,6 @@
         private Button btnStart;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private Label lblMoves;
     }
 }

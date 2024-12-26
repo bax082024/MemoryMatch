@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HjemmeKode\\C-Sharp\\MyProjects\\MemoryMatchV1\\MemoryMatchV1.csproj",
+      "projectUniqueName": "C:\\HjemmeKode\\C-Sharp\\MyProjects\\MemoryMatch\\MemoryMatchV1.csproj",
       "projectName": "MemoryMatchV1",
-      "projectPath": "C:\\HjemmeKode\\C-Sharp\\MyProjects\\MemoryMatchV1\\MemoryMatchV1.csproj",
+      "projectPath": "C:\\HjemmeKode\\C-Sharp\\MyProjects\\MemoryMatch\\MemoryMatchV1.csproj",
       "packagesPath": "C:\\Users\\busch\\.nuget\\packages\\",
-      "outputPath": "C:\\HjemmeKode\\C-Sharp\\MyProjects\\MemoryMatchV1\\obj\\",
+      "outputPath": "C:\\HjemmeKode\\C-Sharp\\MyProjects\\MemoryMatch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
