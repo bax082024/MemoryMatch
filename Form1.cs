@@ -50,7 +50,13 @@ namespace MemoryMatchV1
         }
 
 
+        private void Card_Click(object sender, EventArgs e)
+        {
+            var clickedCard = sender as Button;
 
+
+
+        }
 
 
 
