@@ -11,3 +11,12 @@ Welcome to the **Memory Match Game**, a fun and interactive card-matching game b
 5. Find all matching pairs to win the game!
 
 ---
+
+## Features
+
+- **Grid Layout**: A 4x5 grid with 20 cards to match.
+- **Randomized Setup**: Cards are shuffled at the start of each game.
+- **Interactive Gameplay**: Flip cards to find matching pairs.
+- **Dynamic Reset**: The game board resets when the **Start** button is clicked.
+
+---
