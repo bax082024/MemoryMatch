@@ -151,9 +151,8 @@ namespace MemoryMatchV1
         {
             animatingCard = card;
             animationProgress = 0;
-            flipAnimationTimer.Start();
+            flipAnimationTimer.Start();                   
 
-         
             PlaySound("Sounds/flip.mp3");
         }
 
@@ -367,6 +366,9 @@ namespace MemoryMatchV1
             lblTitle.ForeColor = textColor;
             lblMoves.ForeColor = textColor;
         }
+
+
+        
 
 
 
