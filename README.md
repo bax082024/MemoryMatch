@@ -1,6 +1,7 @@
 # Memory Match Game
 
-Welcome to the **Memory Match Game**, a fun and interactive card-matching game built using **Windows Forms** in C#.
+Memory Match is a fun, customizable card-matching game built with Windows Forms in C#. 
+Find all the matching pairs, and choose your favorite theme!
 
 ## How to Play
 
@@ -14,10 +15,18 @@ Welcome to the **Memory Match Game**, a fun and interactive card-matching game b
 
 ## Features
 
-- **Grid Layout**: A 4x5 grid with 20 cards to match.
-- **Randomized Setup**: Cards are shuffled at the start of each game.
-- **Interactive Gameplay**: Flip cards to find matching pairs.
-- **Dynamic Reset**: The game board resets when the **Start** button is clicked.
+- **Card Matching Gameplay**: Flip and match pairs of cards with animations.
+- **Dynamic Themes**: Customize the game with built-in themes, including:
+  - Default
+  - Cool Blues
+  - Nature Greens
+  - Elegant Purples
+  - Bright Fun
+  - Matrix
+- **Sound Effects**: sounds for flips, matches, start of the game and ofcourse when win!
+- **Animated Visuals**: Watch cards flip with smooth shrinking and growing animations.
+- **Gradient Backgrounds**: Each theme offers a unique gradient background.
+- **User-Friendly Menu**: Switch themes easily using the menu bar.
 
 ---
 
@@ -39,9 +48,10 @@ Welcome to the **Memory Match Game**, a fun and interactive card-matching game b
 
 ## How to Play
 
-1. Press Run button or f5.
-2. Press Start Button.
-3. Try to find the matching pairs.
+1. Start the game by clicking the **Start** button.
+2. Flip two cards by clicking on them.
+3. Match pairs of cards until all pairs are found.
+4. Enjoy the sound effects and visuals as you play.
 
 ---
 
