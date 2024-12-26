@@ -24,7 +24,7 @@ Welcome to the **Memory Match Game**, a fun and interactive card-matching game b
 ## Tech Used
 - **C#**: Main programming language.
 - **Windows Forms**: For the user interface.
-- **.NET Framework**: Project framework.
+- **.NET**: Version 8.0.
 
 ---
 
