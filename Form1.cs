@@ -33,8 +33,8 @@ namespace MemoryMatchV1
                     Dock = DockStyle.Fill,
                     BackColor = Color.LightGray,
                     Font = new Font("Arial", 14, FontStyle.Bold),
-                    Text = "", // Initially hidden
-                    Tag = value // Store the card value in Tag
+                    Text = "", 
+                    Tag = value
                 };
                 button.Click += Card_Click;
                 tableLayoutPanel1.Controls.Add(button); // Add button to the grid
@@ -67,7 +67,7 @@ namespace MemoryMatchV1
                 // Second card flipped
                 secondCard = clickedCard;
                 ShowCard(secondCard);
-                moves++; // Increment move counter
+                moves++;
 
                 // Check for match
                 if (firstCard.Tag.ToString() == secondCard.Tag.ToString())
@@ -114,26 +114,18 @@ namespace MemoryMatchV1
             card.Text = "";
             card.BackColor = Color.LightGray;
         }
-
-
-
-
-
-
-
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            private void Start_Click(object sender, EventArgs e)
+        
+        private void Start_Click(object sender, EventArgs e)
         {           
             firstCard = null;
             secondCard = null;
             moves = 0;
 
             cardValues = new List<string>
-    {
-        "A", "A", "B", "B", "C", "C", "D", "D", "E", "E",
-        "F", "F", "G", "G", "H", "H", "I", "I", "J", "J"
-    };
+            {
+                "A", "A", "B", "B", "C", "C", "D", "D", "E", "E",
+                "F", "F", "G", "G", "H", "H", "I", "I", "J", "J"
+            };
             cardValues = cardValues.OrderBy(x => Guid.NewGuid()).ToList();
 
             int i = 0;
@@ -149,4 +141,4 @@ namespace MemoryMatchV1
 
     }
 }
-}
+
